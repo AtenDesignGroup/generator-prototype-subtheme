@@ -48,7 +48,6 @@ module.exports = class extends Generator {
       "gulpfile.js",
       ".babelrc",
       ".browserslistrc",
-      ".env",
       ".env-example",
       ".eslintrc",
       ".gitignore",

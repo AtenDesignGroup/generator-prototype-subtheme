@@ -24,7 +24,6 @@ describe("generator-prototype-subtheme:build-tools", () => {
       "gulpfile.js/browser-sync.js",
       ".babelrc",
       ".browserslistrc",
-      ".env",
       ".env-example",
       ".eslintrc",
       ".gitignore",
