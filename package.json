@@ -1,6 +1,6 @@
 {
   "name": "generator-prototype-subtheme",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Generate a subtheme for the Prototype Drupal base theme.",
   "homepage": "",
   "author": {
@@ -30,7 +30,8 @@
     "yeoman-test": "^6.2.0"
   },
   "engines": {
-    "npm": ">= 4.0.0"
+    "node": ">=0.12",
+    "npm": ">= 6.1.0"
   },
   "dependencies": {
     "chalk": "^4.1.2",
