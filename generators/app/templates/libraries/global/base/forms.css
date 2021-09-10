@@ -1,0 +1,73 @@
+input,
+label {
+  font-family: var(--font-family-interface);
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-family: var(--font-family-interface);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-bold);
+}
+
+input,
+textarea {
+  max-width: 100%;
+  padding: 6px 15px;
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-body-small);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"],
+input[type="number"] {
+  height: auto;
+}
+
+input[type="file"] {
+  height: inherit;
+}
+
+input[type="checkbox"] {
+  height: auto;
+}
+
+input[type="submit"],
+button {
+  text-transform: uppercase;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline;
+}
+
+
+select {
+  padding: 0 10px;
+  text-indent: 0.01px;
+  text-overflow: "";
+  color: var(--color-text-interface);
+  border-radius: 0;
+  background: #fff;
+  font-size: var(--font-size-body-small);
+  appearance: none;
+}
+
+// Remove default IE arrow
+select::-ms-expand { display: none; }
+
+//
+// @file
+// Form Styles
+//
+// Classes to support form elements
+//
+
+// Form Item Wrapper
+.form-item {
+  margin: 1em 0;
+}

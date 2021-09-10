@@ -5,6 +5,8 @@ const yosay = require("yosay");
 const snakeCase = require("lodash/snakeCase");
 const startCase = require("lodash/startCase");
 const extend = require("lodash/extend");
+const mkdirp = require("mkdirp");
+const path = require("path");
 
 extend(Generator.prototype, require("yeoman-generator/lib/actions/install"));
 
@@ -66,12 +68,6 @@ module.exports = class extends Generator {
     );
 
     this.fs.copyTpl(
-      this.templatePath("prototype.layouts.yml"),
-      this.destinationPath(`${this.answers.themeId}.layouts.yml`),
-      { ...this.answers }
-    );
-
-    this.fs.copyTpl(
       this.templatePath("prototype.theme"),
       this.destinationPath(`${this.answers.themeId}.theme`),
       { ...this.answers }
@@ -82,6 +78,25 @@ module.exports = class extends Generator {
       this.destinationPath("README.txt"),
       { ...this.answers }
     );
+
+    const filesToCopy = [
+      "components",
+      "libraries",
+      "partials",
+      "logo.svg",
+      "logo.png",
+      "screenshot.png"
+    ];
+
+    filesToCopy.forEach(filename => {
+      this.fs.copy(this.templatePath(filename), this.destinationPath(filename));
+    });
+
+    const templateDirectories = ["field", "node", "paragraphs", "views"];
+
+    templateDirectories.forEach(dir => {
+      mkdirp.sync(path.join(this.destinationPath(), "templates", dir));
+    });
   }
 
   install() {

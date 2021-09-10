@@ -1,0 +1,33 @@
+:root {
+  /* Space between items (margin or gap). */
+  --space-gap: 20px;
+  --space-gap-x: var(--space-gap);
+  --space-gap-y: var(--space-gap);
+
+  /* Space between and the edge of their containers (padding). */
+  --space-inset: 20px;
+  --space-inset-x: var(--space-inset);
+  --space-inset-y: var(--space-inset);
+  --space-inset-min: 20px;
+}
+
+@media (width >= 600px) {
+  :root {
+    --space-gap: 30px;
+    --space-inset: 30px;
+  }
+}
+
+@media (width >= 768px) {
+  :root {
+    --space-gap: 42px;
+    --space-inset: 42px;
+  }
+}
+
+@media (width >= 992px) {
+  :root {
+    --space-gap: 60px;
+    --space-inset: 60px;
+  }
+}
