@@ -29,9 +29,9 @@ npm init yo prototype-subtheme:build-tools
 
 MIT © [John Ferris](https://aten.io)
 
-[npm-image]: https://badge.fury.io/js/generator-prototype-subtheme.svg
+[npm-image]: https://img.shields.io/npm/v/generator-prototype-subtheme?style=flat-square
 [npm-url]: https://npmjs.org/package/generator-prototype-subtheme
-[travis-image]: https://travis-ci.com/atendesigngroup/generator-prototype-subtheme.svg?branch=master
+[travis-image]: https://img.shields.io/travis/com/AtenDesignGroup/generator-prototype-subtheme/master?style=flat-square
 [travis-url]: https://travis-ci.com/atendesigngroup/generator-prototype-subtheme
-[daviddm-image]: https://david-dm.org/atendesigngroup/generator-prototype-subtheme.svg?theme=shields.io
+[daviddm-image]: https://img.shields.io/david/AtenDesignGroup/generator-prototype-subtheme?style=flat-square
 [daviddm-url]: https://david-dm.org/atendesigngroup/generator-prototype-subtheme
