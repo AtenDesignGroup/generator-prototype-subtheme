@@ -1,0 +1,29 @@
+global:
+  version: 4.0.x
+  css:
+    base:
+      build/libraries/global/base/document.css: {}
+      build/libraries/global/base/forms.css: {}
+      build/libraries/global/base/lists.css: {}
+      build/libraries/global/base/media.css: {}
+      build/libraries/global/base/tables.css: {}
+      build/libraries/global/base/text.css: {}
+    theme:
+      build/libraries/global/theme/reverse.css: {}
+      build/libraries/global/utilities.css: {}
+
+#
+# Component Library
+#
+
+# Site: Header
+site-header:
+  css:
+    theme:
+      build/components/site-header/site-header.css: {}
+
+# Site: Footer
+site-footer:
+  css:
+    theme:
+      build/components/site-footer/site-footer.css: {}

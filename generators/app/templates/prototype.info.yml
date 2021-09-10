@@ -1,0 +1,44 @@
+name: <%= themeId %>
+type: theme
+description: <%= themeDesc %>
+package: <%= themeId %>
+core_version_requirement: ^8.8 || ^9
+base theme: prototype
+
+regions:
+  header: Header
+  primary_menu: Primary Menu
+  secondary_menu: Secondary Menu
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  sidebar_first: First Sidebar
+  sidebar_second: Second Sidebar
+  footer: Footer
+  breadcrumb: Breadcrumb
+
+libraries:
+  - <%= themeId %>/global
+
+libraries-override:
+  # Replace settings
+  prototype/global
+    base:
+      build/libraries/global/settings/color.css: build/libraries/global/settings/color.css
+      build/libraries/global/settings/font.css: build/libraries/global/settings/font.css
+      build/libraries/global/settings/space.css: build/libraries/global/settings/space.css
+
+libraries-extend:
+  prototype/global:
+    - <%= themeId %>/global
+  prototype/site-header:
+    - <%= themeId %>/site-header
+  prototype/site-footer:
+    - <%= themeId %>/site-footer
+
+components:
+  namespaces:
+    <%= themeId %>-components:
+      - components
+    <%= themeId %>-icons:
+      - images/icons
