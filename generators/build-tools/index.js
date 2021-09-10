@@ -76,9 +76,11 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.installDependencies({
-      bower: false,
-      npm: true
-    });
+    if (!this.options.nested) {
+      this.installDependencies({
+        bower: false,
+        npm: true
+      });
+    }
   }
 };
