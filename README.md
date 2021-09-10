@@ -6,13 +6,13 @@
 
 For [npm](https://www.npmjs.com/) versions of 6 or higher, this generator can be run with npx which does not require installing Yeoman globally.
 
-To generate your new project:
+To generate a new sub-theme:
 
 ```bash
 npm init yo prototype-subtheme
 ```
 
-To add build tools to an existing project:
+To add build tools to an existing theme:
 
 ```bash
 npm init yo prototype-subtheme:build-tools

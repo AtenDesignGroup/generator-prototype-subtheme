@@ -26,15 +26,16 @@
     "lint-staged": "^9.4.3",
     "prettier": "1.19.1",
     "yeoman-assert": "^3.1.1",
-    "yeoman-test": "^1.7.0"
+    "yeoman-environment": "^3.6.0",
+    "yeoman-test": "^6.2.0"
   },
   "engines": {
     "npm": ">= 4.0.0"
   },
   "dependencies": {
-    "chalk": "^2.1.0",
+    "chalk": "^4.1.2",
     "lodash": "^4.17.21",
-    "yeoman-generator": "^3.1.1",
+    "yeoman-generator": "^5.4.2",
     "yosay": "^2.0.2"
   },
   "jest": {
