@@ -2,6 +2,9 @@ global:
   version: 4.0.x
   css:
     base:
+      build/libraries/global/settings/color.css: {}
+      build/libraries/global/settings/font.css: {}
+      build/libraries/global/settings/space.css: {}
       build/libraries/global/base/document.css: {}
       build/libraries/global/base/forms.css: {}
       build/libraries/global/base/lists.css: {}
@@ -9,7 +12,6 @@ global:
       build/libraries/global/base/tables.css: {}
       build/libraries/global/base/text.css: {}
     theme:
-      build/libraries/global/theme/reverse.css: {}
       build/libraries/global/utilities.css: {}
 
 #
@@ -20,10 +22,10 @@ global:
 site-header:
   css:
     theme:
-      build/components/site-header/site-header.css: {}
+      build/components/site-header/site-header.component.css: {}
 
 # Site: Footer
 site-footer:
   css:
     theme:
-      build/components/site-footer/site-footer.css: {}
+      build/components/site-footer/site-footer.component.css: {}

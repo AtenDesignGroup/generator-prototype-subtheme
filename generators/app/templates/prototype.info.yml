@@ -22,11 +22,14 @@ libraries:
 
 libraries-override:
   # Replace settings
-  prototype/global
-    base:
-      build/libraries/global/settings/color.css: build/libraries/global/settings/color.css
-      build/libraries/global/settings/font.css: build/libraries/global/settings/font.css
-      build/libraries/global/settings/space.css: build/libraries/global/settings/space.css
+  prototype/global:
+    css:
+      base:
+        build/libraries/global/settings/color.css: false
+        build/libraries/global/settings/font.css: false
+        build/libraries/global/settings/space.css: false
+      theme:
+        build/libraries/global/utilities.css: false
 
 libraries-extend:
   prototype/global:

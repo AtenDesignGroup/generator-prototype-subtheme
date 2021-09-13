@@ -1,0 +1,22 @@
+/*
+This file provides all utility namespaced classes which are
+prefixed with `u-`.
+
+For more information about utility classes, visit
+https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#utility-namespaces-u-
+
+These classes are generated using a subset of TailwindCSS utilities.
+See https://tailwindcss.com/docs/functions-and-directives
+
+Further configuration can be found in the `tailwind.config.js` file.
+*/
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.u-mw-1500 {
+  max-width: 1500px;
+}
