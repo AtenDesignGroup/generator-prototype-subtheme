@@ -6,6 +6,7 @@ const argv = require('yargs').argv;
 gulp.task('browser-sync', function (cb) {
   browserSync.init(null, {
     proxy: argv.proxy || process.env.BS_PROXY || config.proxy || 'local.test',
+    https: argv.https || process.env.BS_HTTPS || config.https || false,
     files: argv.files ||
       process.env.BS_FILES ||
       config.files || ['public/**/*.*'],
