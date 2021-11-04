@@ -50,7 +50,6 @@ module.exports = class extends Generator {
       ".browserslistrc",
       ".env-example",
       ".eslintrc",
-      ".gitignore",
       ".nvmrc",
       ".postcssrc.js",
       ".prettierrc.yml",
@@ -63,6 +62,12 @@ module.exports = class extends Generator {
     filesToCopy.forEach(filename => {
       this.fs.copy(this.templatePath(filename), this.destinationPath(filename));
     });
+
+    // NPM excludes `.gitignore` so we need to copy and rename it.
+    this.fs.copy(
+      this.templatePath("gitignore"),
+      this.destinationPath(".gitignore")
+    );
 
     // Append Readme documentation.
     this.fs.append(
