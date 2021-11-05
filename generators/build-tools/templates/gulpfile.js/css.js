@@ -7,12 +7,9 @@ const autoprefixer = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const browserSync = require('../config').browserSync.instance;
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const dependents = require('gulp-dependents');
 const { lastRun } = require('gulp');
-
-// Use Dart Sass.
-sass.compiler = require('sass');
 
 const config = require('../config').css;
 
