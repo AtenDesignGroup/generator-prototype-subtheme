@@ -36,9 +36,9 @@ The dev task will watch all CSS and JS files and recompile them when changes are
 
 > Note: For performance reasons, the watch feature will attempt to track dependencies between files and recompile
 > *only* the files it finds in the dependency chain. There are some cases in which dependencies are not explicitly
-> defined such as when a `my-component.css` file uses custom media queries defined in `/libraries/global/settings/media-query.css`.
-> In these cases Gulp is not aware of this dependency and will not automatically recompile `my-component.css` until `my-component.css` is
-> or the task is restarted.
+> defined such as when `my-component.css` uses custom media queries defined in `/libraries/global/settings/media-query.css`.
+> In these cases Gulp is not aware of this dependency and will not automatically recompile `my-component.css` until `my-component.css`
+> is saved or the task is restarted.
 
 #### Browsersync
 
