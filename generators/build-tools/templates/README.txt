@@ -32,7 +32,26 @@ To compile CSS and JS run the following command.
 npm run dev
 ```
 
-This will automatically start a [Browsersync](https://browsersync.io/) proxy server which will watch the theme CSS and JS source files, build the corresponding artifacts and inject them into the browser so you don't need to manually refresh. See the Browsersync documentation for available options and `gulpfile.js/browsersync.js` for different methods of passing this configuration in.
+The dev task will watch all CSS and JS files and recompile them when changes are detected.
+
+> Note: For performance reasons, the watch feature will attempt to track dependencies between files and recompile
+> *only* the files it finds in the dependency chain. There are some cases in which dependencies are not explicitly
+> defined such as when a `my-component.css` file uses custom media queries defined in `/libraries/global/settings/media-query.css`.
+> In these cases Gulp is not aware of this dependency and will not automatically recompile `my-component.css` until `my-component.css` is
+> or the task is restarted.
+
+#### Browsersync
+
+When the `serve` argument is passed to the `dev` script a [Browsersync](https://browsersync.io/) proxy server is launched. This will watch the theme CSS and JS source files, build the corresponding artifacts and inject them into the browser so you don't need to manually refresh. See the Browsersync documentation for available options and `gulpfile.js/browsersync.js` for different methods of passing this configuration in.
+
+```
+npm run dev:serve
+```
+or
+
+```
+npm run dev -- --serve
+```
 
 If there is an option you might need to override, it's likely the domain for your local site that you would like to proxy. By default Browsersync is configured to proxy `local.test`. If you need to change it, you can create a `.env` file in the `prototype` theme directory. See the `.env-example` file.
 
