@@ -1,0 +1,17 @@
+//
+// @file
+// Calc em Function
+//
+@use "sass:math";
+
+@function calc-em($target, $container) {
+  @return math.div($target, $container) * 1em;
+}
+
+@function ce($target, $container) {
+  @return calc-em($target, $container);
+}
+
+@function em($target, $container) {
+  @return calc-em($target, $container);
+}
