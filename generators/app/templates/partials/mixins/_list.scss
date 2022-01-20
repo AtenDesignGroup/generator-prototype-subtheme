@@ -12,11 +12,28 @@
   padding-left: 0;
 }
 
+@mixin list {
+  @include list--reset;
+
+  > li {
+    list-style: none;
+    padding-left: var(--list-space-inset-x, 20px);
+    position: relative;
+
+    &:before {
+      color: var(--color-text-bold);
+      display: block;
+      left: 0;
+      position: absolute;
+    }
+  }
+}
+
 //
 // Bullets
 //
 @mixin list--bullets($item-selector: li) {
-  @include list--reset;
+  @include list;
 
   > #{$item-selector}:before {
     content: "\2022";
@@ -32,7 +49,7 @@
 // Numbered
 //
 @mixin list--numbered($item-selector: li) {
-  @include list--reset;
+  @include list;
   counter-reset: number;
 
   > #{$item-selector}:before {
@@ -42,12 +59,12 @@
 
   // Second Level
   ol {
+    --list-space-inset-x: 30px
     margin-top: 6px;
-    padding-left: 30px;
 
     > #{$item-selector} {
       padding-left: 0;
-      text-indent: -30px;
+      text-indent: calc(-1 * var(--list-space-inset-x));
 
       &:before {
         display: inline;

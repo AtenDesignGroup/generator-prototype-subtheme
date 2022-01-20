@@ -12,3 +12,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [HTTPS Proxy support](https://browsersync.io/docs/options#option-https) for Browsersync is now configurable.
 
 [0.0.6]: https://github.com/AtenDesignGroup/generator-prototype-subtheme/releases/tag/v0.0.6
+
+## [0.0.13] - 2022-01-20
+
+### Added
+
+- `ce` function alias for em calculations.
+### Fixed
+
+- `list` mixin did not properly set indentation.
+
+[0.0.13]: https://github.com/AtenDesignGroup/generator-prototype-subtheme/releases/tag/v0.0.13
